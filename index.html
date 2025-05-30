@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grievance Redressal System</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Redressal Portal</title>
 </head>
 <body>
-  <div class="container">
-    <h2>Grievance Redressal Portal</h2>
-    <!-- <p>Rant all your issues here Rumi will here you</p> -->
-    <form id="grievanceForm">
-      <textarea id="grievanceText" placeholder="Enter your grievance here..." required></textarea>
-      <button type="submit">Submit Grievance</button>
-    </form>
+<style>
 
-    <!-- <h3>Submitted Grievances</h3>
-    <div id="grievanceList"></div> -->
-  </div>
+</style>
 
-  <!-- Firebase App and Realtime Database SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
-  
-  <script src="script.js"></script>
-  
+
+
+    <main>
+    <h1>DUMPING AREA: rant all your thoughts here..be it rage rant cry anything!</h1>
+     <div class="login-container">
+       <h3>Hey there,YOU</h3>
+       <input type="text"  id="Username" placeholder="Your name please!" required/>
+       <button onclick="proceed()">Enter</button>
+     </div>
+    </main>
+
+  <script>
+  function proceed() {
+    const UserName = document.getElementById("Username");
+
+    if (!UserName || !UserName.value.trim()) {
+      return alert("Please enter your name before entering!");
+    }
+
+    const name = UserName.value.trim();
+    localStorage.setItem('grievanceUser', name);
+
+    window.location.href = "main.html"; // 
+  }
+</script>
+
+
 </body>
 </html>

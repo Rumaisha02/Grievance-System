@@ -23,10 +23,13 @@ const grievanceText = document.getElementById("grievanceText");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const user=localStorage.getItem('grievanceUser')
   const text = grievanceText.value.trim();
-  if (!text) return;
+  if (!text || !user ) return;
 
   const grievance = {
+    name: user,
     message: text,
     time: new Date().toLocaleString(),
   };
@@ -43,4 +46,6 @@ form.addEventListener("submit", (e) => {
   // Update UI
   // addGrievanceToUI(grievance);
   grievanceText.value = "";
+  Username.value=" ";
+  
 });
