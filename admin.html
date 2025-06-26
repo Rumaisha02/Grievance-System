@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Viewer</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <h2>Submitted Grievances</h2>
+  <table id="grievanceTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody id="grievanceBody">
+      <!-- Grievances will be inserted here -->
+    </tbody>
+  </table>
+
+  <!-- Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+  <script src="admin.js"></script>
+</body>
+</html>
