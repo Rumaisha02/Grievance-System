@@ -46,6 +46,12 @@ form.addEventListener("submit", (e) => {
   // Update UI
   // addGrievanceToUI(grievance);
   grievanceText.value = "";
+  confirmationMessage.style.display="block";
   Username.value=" ";
   
+});
+
+grievanceText.addEventListener('input', ()=>{
+      confirmationMessage.style.display="none";
+
 });

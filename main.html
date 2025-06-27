@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grievance Redressal System</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h2>Grievance Redressal Portal</h2>
-    <!-- <p>Rant all your issues here Rumi will here you</p> -->
-    <form id="grievanceForm">
-      <textarea id="grievanceText" placeholder="Enter your grievance here..." required></textarea>
-      <button type="submit">Submit Grievance</button>
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grievance Redressal System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="main_screen">
+      <div class="container main-form-section">
+        <h2>Grievance Redressal Portal</h2>
+        <!-- <p>Rant all your issues here Rumi will hear you</p> -->
+        <form id="grievanceForm">
+          <textarea
+            id="grievanceText"
+            placeholder="Enter your grievance here..."
+            required
+          ></textarea>
+          <button type="submit">Submit Grievance</button>
+          <p
+            id="confirmationMessage"
+            style="
+              display: none;
+              background-color: white;
+              padding: 5px 10px;
+              border-radius: 5px;
+              color: green;
+              margin-top: 10px;
+            "
+          >
+            Your response has been stored!
+          </p>
+        </form>
+      </div>
 
-    <!-- <h3>Submitted Grievances</h3>
-    <div id="grievanceList"></div> -->
-  </div>
+   
+    </section>
 
-  <!-- Firebase App and Realtime Database SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
-  
-  <script src="script.js"></script>
-  
-</body>
+
+    <!-- Firebase App and Realtime Database SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+    <!-- Your Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
